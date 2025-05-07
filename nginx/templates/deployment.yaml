@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vault-demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: vault-demo
+  template:
+    metadata:
+      labels:
+        app: vault-demo
+    spec:
+      containers:
+      - name: app
+        image: nginx
+        env:
+        - name: APP_USERNAME
+          value: "{{ (vault \"gitlab/data/creds\" \"username\") }}"
+        - name: APP_PASSWORD
+          value: "{{ (vault \"gitlab/data/creds\" \"password\") }}"
+
