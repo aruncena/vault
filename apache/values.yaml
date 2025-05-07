@@ -159,3 +159,6 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+app:
+  username: "vault-username-placeholder"
+  password: "vault-password-placeholder"
