@@ -51,9 +51,9 @@ spec:
                 value: 8081
             envs:
               - name: VAULT_SECRET_USER
-                value: <path:kv-v2/data/demo#user>
+                value: <path:gitlab/data/creds#username>
               - name: VAULT_SECRET_PASSWORD
-                value: <path:kv-v2/data/demo#password>
+                value: <path:gitlab/data/creds#password>
             log:
               level:
                 spring: "info"
