@@ -40,7 +40,7 @@ ports:
 
 envs:
   - name: EXTRA_HELM_ENV
-    value: <path:gitlab/data/creds#password>
+    value: <path:gitlab/data/creds#username>
 
 logging:
   level:
