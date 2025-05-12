@@ -3,7 +3,7 @@ serviceAccount:
   create: true
 
 image:
-  repository: nginx
+  repository: 861923434973.dkr.ecr.ap-south-1.amazonaws.com/nginx:latest
   tag: latest
   pullPolicy: IfNotPresent
 
